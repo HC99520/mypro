@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.sxh19.account.repo.StaffRepo">
+<resultMap id="staffMap" type="top.sxh19.account.dmo.Staff">
+    <id column="staff_id" property="staffId"></id>
+    <result column="first_name" property="firstName"></result>
+    <result column="last_name" property="lastName"></result>
+</resultMap>
+    <select id="getStaffs" resultMap="staffMap">
+        select  staff_id,first_name,last_name from staff
+    </select>
+</mapper>
